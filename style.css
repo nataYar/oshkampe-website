@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Caveat:wght@400;500;600;700&family=Raleway&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;1,100&family=Open+Sans:wght@300;400&family=Roboto&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: rgb(0, 0, 0);
+  /* font-family: 'Raleway', sans-serif; */
+  font-family: 'Montserrat', sans-serif;
+  /* font-family: 'Open Sans', sans-serif;  */
+}
+
+h1, 
+h2, 
+h3, 
+h4,
+h5,
+h6 {
+  font-family: 'Comfortaa', cursive;
+  /* font-family: 'Montserrat', sans-serif; */
+  /* font-family: 'Caveat', cursive; */
+  /* font-family: 'Open Sans', sans-serif;  */
+  font-weight: 400;
+}
+
+.section-welcome {
+  height: 100vh;
+}
+
+.upper-gray-line {
+  background-color: rgb(250, 250, 250);
+  top: 0;
+  height: 26%;
+  width: 100%;
+  position: absolute;
+}
+
+.welcome-picture {
+  width: 100%;
+  height: 120%;
+  position: absolute;
+  top: -10%;
+  z-index: -1;
+  object-fit: cover; 
+}
+
+ul {
+  list-style-type: none;
+}
+
+nav {
+  position: fixed;
+  z-index: 9;
+  font-size: 0.7rem;
+  width: 100%;
+  display: flex;
+  padding: 3rem 2rem;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+}
+
+
+.name {
+  position: relative;
+  top: 5%;
+  left: 5%;
+  height: 5rem;
+  width: 10rem;
+  z-index: 1;
+  
+}
+
+.first-name {
+  font-size: 2.5rem;
+  color: rgb(0, 0, 0);
+  /* transform: translate(-10%, 45%); */
+}
+
+.last-name {
+  margin-top: 2%;
+  font-size: 2.5rem;
+  color: rgb(0, 0, 0);
+  /* transform: translate(25%, 86%); */ 
+}
+.occupation{
+  margin-top: 5%;
+  margin-left: 5%;
+  color: #b9b9b9;
+  display: block;
+  border-top: #b9b9b9 2px solid;
+  width: 127%;
+  font-family: 'Comfortaa', cursive;
+}
+
+.section-about {
+  padding: 10% 20%; 
+  height: 130vh;
+  width: 100%;
+  background-color: rgb(22, 22, 22);
+}
+.about-me-text {
+  margin-top: 30%;
+  text-align: center;
+  color:rgb(250, 250, 250);
+  font-size: 2rem;
+}
+
+p.about-me-text {
+  margin-top: 5%;
+  line-height: 2;
+}
+
+.section-works{
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+.works {
+  width: 50%;
+  padding: 0.2rem;
+}
+
+
+  /*
+  #FFFFFF  white
+  #e0e2ed  gray
+  #5f62ca  purplish
+  #63bbb4  mint
+  #87e9ca  bright mint
+
+  //highlight: 
+  #62a774 green
+  #f8d39e font 
+
+  #deec90 yellow back
+  #d4a277 reddish font
+
+  #eeb171 orange
+  #717d76 dark green
+  */
