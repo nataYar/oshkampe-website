@@ -1,0 +1,120 @@
+nav {
+  position: fixed;
+  z-index: 99;
+  height: 100vh;
+  width: 6rem;
+  right: 0;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: all 0.7s ease-out;
+  background-color: #e8eaf7;
+}
+
+nav.showNav{
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+.burger.hidden{
+  display: none;
+}
+
+.burger {
+  position: fixed;
+  top: 5%;
+  height: 5%;
+  right:0;
+  transform: translateX(-1.5rem);
+  border-radius: 10%;
+  cursor: pointer;
+  z-index: 1000000;
+}
+
+.bar { 
+  display: block;
+  width: 45px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease;
+  background-color: #3b3b3b;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+} 
+
+.toggle .line1{
+  width: 30px;
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2{
+  opacity: 0;
+}
+.toggle .line3{
+  width: 30px;
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.nav-vertical-links {
+  padding-top: 30%;
+  width: 100%;
+  height: 100%;
+  display: flex; 
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: transparent;
+}
+
+.nav-vertical-links li {
+  list-style: none;
+  text-align: center;
+  width: 98%;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.7s ease-out .2s;
+}
+
+.nav-vertical-links li.navLinkShown{
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+.nav-vertical-links a {
+  color: #252525;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+/* #5f62ca */
+.nav-vertical-links a:after{
+  content: "";
+  position: absolute;
+  width: 50%;  
+  bottom: 0;
+  height: 1px;
+  background-color: #252525;
+  transform: scaleX(0);
+  transition: transform 0.25s ease-out;
+  left:25%;
+  transform-origin: bottom left;
+}
+.nav-vertical-links a:before{
+  content: "";
+  position: absolute;
+  width: 50%; 
+  bottom: 0;
+  height: 1px;
+  background-color: #252525;
+  transform: scaleX(0);
+  transition: transform 0.25s ease-out;
+  left:25%;
+  transform-origin: bottom right;
+}
+.nav-vertical-links a:hover:after {
+  transform: scaleX(0.5);
+  transform-origin: bottom left;
+}
+.nav-vertical-links a:hover:before {
+  transform: scaleX(0.5);
+  transform-origin: bottom right;
+}
+

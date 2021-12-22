@@ -1,0 +1,27 @@
+.cursor-circle {
+    width: 15rem;
+    height: 15rem;
+    border: 2px solid none;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 10000;
+    backdrop-filter: invert();
+    /* overflow: hidden; */
+  }
+
+ .cursor-circle-hidden{
+   display: none;
+ } 
+
+ .cursor-regular{
+  display: none;
+ }
+
+/* .cursor-smaller{
+  width: 7rem;
+  height: 7rem;
+}  */
+
+
