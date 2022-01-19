@@ -1,31 +1,10 @@
 @media screen and (max-width:1024px){
-    .section-images{
-      column-count: 3;
-    }
-    .section-about {
-      height: fit-content;
-    }
-    .flex{
-      display: flex;
-      flex-flow: column wrap;
-      justify-content: center;
-      align-items: center;
-    }
-    .full-img{
-      max-height: 90%;
-      max-width: 100%;
-    }
-
-    /* height: auto;
-    max-width: 100%; */
-
-
-    /* .vertical{
-      height: 80%;
-    }
-    .horizontal{
-      width: 80%;
-    } */
+  .images-div{
+    column-count: 3;
+  }
+  .section-about {
+    height: fit-content;
+  }
 }
 
   @media screen and (max-width:768px){
@@ -48,21 +27,8 @@
     .burger {
       position: fixed;
       transform: translateX(-2.5rem);
-      /* right: 8em; */
-      /* height: 5%; */
       top: 93%;
     }  
-    /* .bar { 
-      width: 40px;
-      height: 3px;
-      margin-top: 8px;
-    }
-    .toggle .line1{
-      transform: rotate(-45deg) translate(-7px, 6px);
-    }
-    .toggle .line3{
-      transform: rotate(45deg) translate(-7px, -10px);
-    } */
     .cursor-circle{
       display: none;
     }
@@ -70,6 +36,35 @@
       position: absolute;
       top: 40%;
     }
+    .name-artist { 
+      font-size: 3rem;
+      
+    }
+
+
+    /*
+  #FFFFFF  white
+  #e0e2ed  gray
+  #5f62ca  purplish
+  #63bbb4  mint
+  #87e9ca  bright mint
+
+  //highlight: 
+  #62a774 green
+  #f8d39e font 
+
+  #deec90 yellow back
+  #d4a277 reddish font
+
+  #eeb171 orange
+  #717d76 dark gray
+  */
+
+
+
+
+
+
 
     h1 .section-about{
       opacity: 1;
@@ -78,44 +73,89 @@
       height: fit-content;
     }
     .about-me-text{
-      font-size: 1rem;
+      font-size: 1.3rem;
       padding: 2%;
+      color: #ffeef0; 
     }
-    .section-images{
+
+    .images-div{
       column-count: 2;
     }
-    .full-img{
+    .caption{
+      padding: 3%;
+    }
+    .section-paintings h4{
+      font-size: 1.2rem;
+    }
+
+    .section-exhibitions{
       height: auto;
-      max-width: 100%;
+      width: 100vw;
+      display: flex;
+      flex-flow: column nowrap;
     }
-    .slide-track{
-      width: calc(300px * 6);
+    .section-exhibitions-title{
+      position: relative;
+      align-self: flex-start;
+      height: 2rem;
+      font-size: 1.2rem;
+      padding: 10% 0%;
+      margin-top: 0%;
     }
-    .slide{
-      height: auto;
-      width: 300px;
-      padding: 15px;
-    }
-    /* .horizontal{
+    .exh{
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-between; 
+      align-content: space-between;
+
       width: 100%;
+      height: auto;
+      padding: 5%
     }
-    .vertical{
-      max-height: 90%;
-    } */
-    .rightIconContainer{
-      display: none;
+    .exh-1{
+      background-color: transparent;
     }
-    .leftIconContainer{
-      display: none;
+    .exh-1-img-wrapper{
+      top: 0%;
+      left: 0%;
+      transform: translate(0%, 0%);
+      position: relative;
+      min-height: 2rem;
+      /* box-shadow: 0 3px 10px rgb(0 0 0 / 0.5); */
+      margin-bottom: 3%;
     }
-  
-    @keyframes scroll {
-      0%{
-        transform: translateX(0);
-      }
-      100%{
-        transform: translateX(calc(-300px * 3));
-      }
+    .exh-2-img-wrapper{
+      position: relative;
+      top: 0%;
+      left: 0%;
+      transform: translate(0%, 0%);
+      height: fit-content;
+      /* box-shadow: 0 3px 10px rgb(0 0 0 / 0.5); */
+      margin-bottom: 3%;
     }
+
+    /* _____________________________________________ */
+    .exh-text{
+      position: relative;
+      z-index: 3;
+      background-color: #e8eaf7;
+      padding: 4%;
+      top: 0%;
+      margin: 0%;
+      /* box-shadow: 0 3px 10px rgb(0 0 0 / 0.5); */
+    }
+    .exh-text p{
+      padding: 2% 0%;
+      font-size: 1rem;
+    }
+    .exh-1-text{
+      position: unset;
+      transform: translate(0%, 0%);
+    }
+    .exh-2-text{
+      position: unset;
+      transform: translate(0%, 0%);
+    }
+
   }
   

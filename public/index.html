@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html class="no-js" lang="">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>Oshkampe</title>
-    <meta name="description" content="" />
+    <meta name="description" content="Oksana Oshkampe's artworks website" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./CSS/style.css" />
     <link rel="stylesheet" href="./CSS/style-nav.css" />
@@ -34,27 +34,29 @@
   
    <section id="section-welcome" class="section-welcome">
       <div class="name">
-        <h1 class="name-artist"> Оксана Ошкампе</h1>
+
+        <h1 class="name-artist"><span class="cta1">Oksana</span></h1>
+        <h1 class="name-artist"><span class="cta2">Oshkampe</span></h1>
 
         <div class="social-media">
           <div class="social-media-container">
-            <a href='https://www.instagram.com/_trip_to_fun_/' target="_blank" rel="noopener noreferrer">
-              <img class="social-media-icon instagram" src="./CSS/icons/media/insta_white.png"/></a>
+            <a href='https://www.instagram.com/_trip_to_fun_/' target="_blank" rel="noopener noreferrer" >
+              <img class="social-media-icon instagram" src="./CSS/icons/media/insta_white.png" alt="instagram icon"/></a>
           </div>
           <div class="social-media-container">
-            <a href='https://vk.com/oxane' target="_blank" rel="noopener noreferrer">
-            <img class="social-media-icon vk" src="./CSS/icons/media/vk_white.png"/></a> 
+            <a href='https://vk.com/oxane' target="_blank" rel="noopener noreferrer" >
+            <img class="social-media-icon vk" src="./CSS/icons/media/vk_white.png" alt="vk icon" /></a> 
           </div>
         </div>
       </div>
    
-    <img class="picture-original-center" src="painting/original/preview/Flowers, 2009 FOR SALE 444$-min.JPG" alt="welcome-painting" />
-    <img class="picture-original-left" src="painting/original/preview/Sweet Vynil Rooney, 2012, acrylic, in private collection.jpg" alt="welcome-painting" /> 
-    <img class="picture-copy-right" src="painting/original/preview/My Child may-july 2014, oil,acrylic FOR SALE 20000$ .jpg" alt="welcome-painting" /> 
-    <img class="picture-copy-center" src="painting/original/preview/Competition, 2011 FOR SALE 222$-min.jpg" alt="welcome-painting" /> 
+    <img class="welcome-pic picture-original-center" src="painting/original/preview/Flowers, 2009 FOR SALE 444$-min.JPG" alt="welcome painting" />
+    <img class="welcome-pic  picture-original-left" src="painting/original/preview/Sweet Vynil Rooney, 2012, acrylic, in private collection.jpg" alt="welcome painting" /> 
+    <img class="welcome-pic  picture-copy-right" src="painting/original/preview/My Child may-july 2014, oil,acrylic FOR SALE 20000$ .jpg" alt="welcome painting" /> 
+    <img class="welcome-pic  picture-copy-center" src="painting/original/preview/Competition, 2011 FOR SALE 222$-min.jpg" alt="welcome painting" /> 
 
     <div class="scrollIconContainer">
-      <img class="scrollIcon" src="./CSS/icons/selected/scrollarrowtodown_gray.png" />
+      <img class="scrollIcon" src="./CSS/icons/selected/scrollarrowtodown_gray.png" alt="scroll icon" />
     </div>
   </section>
 
@@ -64,84 +66,63 @@
   </section>
 
   <section id="section-paintings" class="section-paintings" >
-    <div class="section-images"></div>  
+    
+    <!-- <div class="section-images"></div>   -->
+    <!-- original pictures first --> 
+    <h4 class="upCase">Original works</h4>
+    <div class="original images-div"></div>
+
+    <h4 class="upCase">Copies</h4>
+    <div class="copies images-div"></div>
+
+    <h4 class="upCase">Music inspired works</h4>
+    <div class="music images-div"></div>
+
     <div  class="full-img-container">
       <div class="leftIconContainer">
-        <img class="changeSlideIcon" id="goLeft" onclick="goDownGallery(1)"
-        src="./CSS/icons/selected/leftarrow_light_gray.png" />
-      </div>
-      <div class=flex>
-        <img src="" alt="full-sized picture" class="full-img"/>
-        <p class="caption"></p>
+        <img class="changePicIcon" alt="picture from a gallery" id="goLeft" onclick="goDownGallery(1)"
+        src="./CSS/icons/selected/double-arrow.png" 
+        alt="go up the gallery button" />
       </div>
       
+      <img src="" class="full-img" alt="full image" />
+      <p class="caption"></p>
+      
       <div class="rightIconContainer">
-        <img class="changeSlideIcon" id="goRight" onclick="goUpGallery(1)"
-        src="./CSS/icons/selected/rightarrow_light_gray.png" />
+        <img class="changePicIcon" id="goRight" onclick="goUpGallery(1)"
+        src="./CSS/icons/selected/double-arrow.png" 
+        alt="go down the gallery button" />
       </div>
 
     </div>
   </section>
 
   <section id="section-exhibitions" class="section-exhibitions">
-    <h3 class="section-exhibitions-title">Выставки</h3>
-   
-    <div class="slider"> 
-      <div class="slide-track">  
-        <div class="slide"> 
-          <div class="border">
-          <img class="slide-img" src="./painting/preview/red-flower-preview.jpg"/>
-          </div>
-          <h3>Impressionists</h3>
-          <p>Описание выставки</p>
-          <p>Ночная 1</p>
-        </div>
-        
-        <div class="slide ">
-          <div class="border">
-            <img class="slide-img" src="./painting/preview/red-flower-preview.jpg"/>
-          </div>
-          <h3>Impressionists</h3>
-          <p>Описание выставки</p>
-          <p>Ночная 2</p>
-        </div>
-       
-        <div class="slide ">
-          <div class="border">
-            <img class="slide-img" src="./painting/preview/red-flower-preview.jpg"/>
-          </div>
-          <h3>Impressionists</h3>
-          <p>Описание выставки</p>
-          <p>Ночная 3</p>
-        </div>
-        
-        <!-- COPY FOR CAROUSEL-->
-        <div class="slide">
-          <div class="border">
-            <img class="slide-img" src="./painting/preview/red-flower-preview.jpg"/>
-          </div>
-          <h3>Impressionists</h3>
-          <p>Описание выставки</p>
-          <p>Ночная 1/2</p>
-        </div>
-        <div class="slide ">
-          <div class="border">
-            <img class="slide-img" src="./painting/preview/red-flower-preview.jpg"/>
-          </div>
-          <h3>Impressionists</h3>
-          <p>Описание выставки</p>
-          <p>Ночная 2/2</p>
-        </div>
-        <div class="slide ">
-          <div class="border">
-            <img class="slide-img" src="./painting/preview/red-flower-preview.jpg"/>
-          </div>
-          <h3>Impressionists</h3>
-          <p>Описание выставки</p>
-          <p>Ночная 3/3</p>
-        </div>
+    <h3 class="upCase section-exhibitions-title">Exhibitions</h3>
+
+    <div class="exh exh-1">  
+      <div class="exh-1-img-wrapper">
+        <img class="exh-img" src="./painting/original/preview/Flowers, 2009 FOR SALE 444$-min.JPG"
+        alt="image from ARTPLAY Design Center exhibition"/>
+      </div>
+      <div class="exh-text exh-1-text">
+        <h3>Exhibition 553</h3>
+        <p>ARTPLAY Design Center, Laboratory Hall, Moscow</p>
+        <p>March 26 - 27, 2011</p>
+      </div>
     </div>
-  </div>
+
+    <div class="exh exh-2">  
+      <div class="exh-2-img-wrapper">
+        <img class="exh-img" src="./painting/exhibitions/brandbook.jpg" 
+        alt="image from brandbook exhibition"/>
+      </div>
+      <div class="exh-text exh-2-text">
+        <h3>Brandbook</h3>
+        <p>Informal exhibition center DEPO on Kurskaya</p>
+        <p>June, 2011</p>
+      </div>
+    </div>
   </section>
 
   <section id="section-contacts" class="section-contacts">
@@ -149,25 +130,25 @@
     <div class="media-bottom-section">
       <div class="media-icon-container">
         <a href='https://www.instagram.com/_trip_to_fun_/' target="_blank" rel="noopener noreferrer">
-          <img class="social-media-icon instagram" src="./CSS/icons/media/insta_white.png"/></a>
+          <img class="social-media-icon instagram" src="./CSS/icons/media/insta_gray.png" alt="instagram icon"/></a>
       </div>
 
       <div class="media-icon-container">
         <a href='https://vk.com/oxane' target="_blank" rel="noopener noreferrer">
-        <img class="social-media-icon" src="./CSS/icons/media/vk_white.png"/></a> 
+        <img class="social-media-icon" src="./CSS/icons/media/vk_gray.png" alt="vk icon"/></a> 
       </div>
     </div>
     </section>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js" integrity="sha512-UxP+UhJaGRWuMG2YC6LPWYpFQnsSgnor0VUF3BHdD83PS/pOpN+FYbZmrYN+ISX8jnvgVUciqP/fILOXDjZSwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.js" integrity="sha512-judXDFLnOTJsUwd55lhbrX3uSoSQSOZR6vNrsll+4ViUFv+XOIr/xaIK96soMj6s5jVszd7I97a0H+WhgFwTEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenLite.min.js" ></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TimelineLite.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/plugins/CSSPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.js" integrity="sha512-judXDFLnOTJsUwd55lhbrX3uSoSQSOZR6vNrsll+4ViUFv+XOIr/xaIK96soMj6s5jVszd7I97a0H+WhgFwTEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="./JS/parallax.js"></script>
   <script src="./JS/mouse.js"></script>
-  <script src="./index.js"></script>
+  <script src="./JS/index.js"></script>
   <script src="./firebase.js"></script>
 </body>
 </html>
