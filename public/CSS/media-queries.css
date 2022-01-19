@@ -5,6 +5,7 @@
   .section-about {
     height: fit-content;
   }
+  
 }
 
   @media screen and (max-width:768px){
@@ -34,14 +35,12 @@
     }
     .name {
       position: absolute;
-      top: 40%;
+      top: 45%;
     }
     .name-artist { 
       font-size: 3rem;
-      
+      width: 23rem;
     }
-
-
     /*
   #FFFFFF  white
   #e0e2ed  gray
@@ -60,12 +59,6 @@
   #717d76 dark gray
   */
 
-
-
-
-
-
-
     h1 .section-about{
       opacity: 1;
     }
@@ -73,11 +66,10 @@
       height: fit-content;
     }
     .about-me-text{
-      font-size: 1.3rem;
+      font-size: 1rem;
       padding: 2%;
       color: #ffeef0; 
     }
-
     .images-div{
       column-count: 2;
     }

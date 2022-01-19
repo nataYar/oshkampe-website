@@ -75,7 +75,7 @@ h6 {
 }
 .name {
   position: absolute;
-  top: 45%;
+  top: 50%;
   left: 50%;
   width: fit-content;
   transform: translate(-50%, -50%);
@@ -86,10 +86,8 @@ h6 {
 }
 .name-artist { 
   font-size: 4rem;
-  color: #87e9ca;
   font-weight: 900;
   overflow: hidden;
-  width: auto;
 }
 .name-artist span {
   display: block;
@@ -187,7 +185,6 @@ h6 {
   text-align: center;
   color: #ffffff;
   font-size: 2rem;
-  /* z-index: 9; */
 }
 /* ___________________________________________________________________________________ */
 .section-paintings {

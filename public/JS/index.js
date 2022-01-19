@@ -17,10 +17,10 @@ navSlide();
 
 //FILL IN SECTION WITH PAINTINGS
 const originalImages = [
+    {direction:"horizontal", lowQuality: "painting/original/preview/Composition_2013_FOR_SALE_333$.jpg", fullImg: "painting/original/preview/Competition, 2011 FOR SALE 222$-min.jpg",  name: "Composition 2013 FOR SALE 333$", description: "Composition 2013 FOR SALE 333$"},
     {direction:"horizontal", lowQuality: "painting/original/preview/Action, 2010 FOR SALE 333$-min.JPG", fullImg: "painting/original/preview/Action, 2010 FOR SALE 333$-min.JPG" , name: "Action, 2010 FOR SALE 333$", description: "2010, FOR SALE 333$"},
     {direction:"horizontal", lowQuality: "painting/original/preview/Competition, 2011 FOR SALE 222$-min.jpg", fullImg: "painting/original/preview/Competition, 2011 FOR SALE 222$-min.jpg",  name: "Competition, 2011 FOR SALE 222$", description: "Competition, 2011 FOR SALE 222$"},
     {direction:"vertical", lowQuality: "painting/original/preview/E, 2015, acrylic FOR SALE 665$-min.jpg", fullImg: "painting/original/preview/E, 2015, acrylic FOR SALE 665$-min.jpg",  name: "E, 2015, acrylic FOR SALE 665$", description: "E, 2015, acrylic FOR SALE 665$"},
-    {direction:"horizontal", lowQuality: "painting/original/preview/Composition 2013 FOR SALE 333$-min-min.JPG", fullImg: "painting/original/preview/Competition, 2011 FOR SALE 222$-min.jpg",  name: "Competition, 2011 FOR SALE 222$", description: "Composition 2013 FOR SALE 333$"},
 
     {direction:"vertical", lowQuality: "painting/original/preview/Autumn tomatoes, 2017 FOR SALE 300$-min.JPG", fullImg: "painting/original/preview/E, 2015, acrylic FOR SALE 665$-min.jpg",  name: "Autumn tomatoes, 2017 FOR SALE 300$", description: "E, 2015, acrylic FOR SALE 665$"},
     {direction:"vertical", lowQuality: "painting/original/preview/Chess Composition, march 2015, oilcanvas FOR SALE 30000$-min.jpg", fullImg: "painting/original/preview/E, 2015, acrylic FOR SALE 665$-min.jpg",  name: "Chess Composition, march 2015, oilcanvas FOR SALE 30000$", description: "E, 2015, acrylic FOR SALE 665$"},
@@ -230,28 +230,24 @@ fullImgs.addEventListener("click", (e)=> {
     e.target.className = "full-img";
         document.body.classList.remove("stop-scrolling");
         fullImgCont.classList.remove("open");
-
 })
-
 
 //function to change picture
 const currentImg = document.querySelector(".full-img");
-
 function getCurrImg(){
     let currInd;
     let array;
-    if(originalImages.find(el => el.name == currentImg.alt)){
+    if (originalImages.find(el => el.name == currentImg.alt)) {
         currInd = originalImages.findIndex(el => el.name == currentImg.alt)
         array = originalImages
-    } 
-    else if(copiesImages.find(el => el.name == currentImg.alt)){
+    } else if (copiesImages.find(el => el.name == currentImg.alt)) {
         currInd = copiesImages.findIndex(el => el.name == currentImg.alt)
         array = copiesImages
-    } else {
+    } else if (musicImages.find(el => el.name == currentImg.alt)) {
         currInd = musicImages.findIndex(el => el.name == currentImg.alt)
         array = musicImages
     }
-
+    console.log(currInd, array)
     return {currInd, array};
 }
 
@@ -312,4 +308,6 @@ function handleSizeChange(){
         currentImg.style.height = "70%"   
     }
 }
+
+// window.onresize = function(){ location.reload(); }
 
