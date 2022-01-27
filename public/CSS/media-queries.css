@@ -5,7 +5,7 @@
   .section-about {
     height: fit-content;
   }
-  
+  .cursor-circle{display: none;}
 }
 
   @media screen and (max-width:768px){
@@ -30,12 +30,17 @@
       transform: translateX(-2.5rem);
       top: 93%;
     }  
-    .cursor-circle{
-      display: none;
-    }
+
+    .picture-original-center { display: none;}
+    .picture-original-left { display: none;}
+    .picture-original-right { display: none;}
+    .picture-copy-right { display: none;}
+    .picture-copy-center { display: none;}
+    .scrollIconContainer { display: none;}
+
     .name {
-      position: absolute;
-      top: 45%;
+      /* position: absolute; */
+      /* top: 45%; */
     }
     .name-artist { 
       font-size: 3rem;
@@ -58,17 +63,11 @@
   #eeb171 orange
   #717d76 dark gray
   */
-
-    h1 .section-about{
-      opacity: 1;
+    .my-works{
+      font-size: 2rem;
     }
-    .section-about{
-      height: fit-content;
-    }
-    .about-me-text{
-      font-size: 1rem;
-      padding: 2%;
-      color: #ffeef0; 
+    .parallax-container {
+      height: 20vh;
     }
     .images-div{
       column-count: 2;
@@ -99,55 +98,13 @@
       flex-flow: column nowrap;
       justify-content: space-between; 
       align-content: space-between;
-
       width: 100%;
-      height: auto;
-      padding: 5%
     }
-    .exh-1{
-      background-color: transparent;
+    .section-contacts{
+      height: 20vh;
     }
-    .exh-1-img-wrapper{
-      top: 0%;
-      left: 0%;
-      transform: translate(0%, 0%);
-      position: relative;
-      min-height: 2rem;
-      /* box-shadow: 0 3px 10px rgb(0 0 0 / 0.5); */
-      margin-bottom: 3%;
-    }
-    .exh-2-img-wrapper{
-      position: relative;
-      top: 0%;
-      left: 0%;
-      transform: translate(0%, 0%);
-      height: fit-content;
-      /* box-shadow: 0 3px 10px rgb(0 0 0 / 0.5); */
-      margin-bottom: 3%;
-    }
-
-    /* _____________________________________________ */
-    .exh-text{
-      position: relative;
-      z-index: 3;
-      background-color: #e8eaf7;
-      padding: 4%;
-      top: 0%;
-      margin: 0%;
-      /* box-shadow: 0 3px 10px rgb(0 0 0 / 0.5); */
-    }
-    .exh-text p{
-      padding: 2% 0%;
-      font-size: 1rem;
-    }
-    .exh-1-text{
-      position: unset;
-      transform: translate(0%, 0%);
-    }
-    .exh-2-text{
-      position: unset;
-      transform: translate(0%, 0%);
-    }
-
+    .curve2 { bottom: 90%; }
+    .section-contacts a { padding-top: 10%; }
+    
   }
   

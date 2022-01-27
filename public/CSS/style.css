@@ -8,6 +8,7 @@
   /* font-family: 'Raleway', sans-serif; */
   font-family: 'Montserrat', sans-serif;
   /* font-family: 'Open Sans', sans-serif;  */
+  
 }
 
 html{
@@ -30,6 +31,8 @@ h6 {
   background-color: #5f62ca;
   overflow: hidden;
   left: 0;
+  position: relative;
+  z-index: 5;
 }
 
 .picture-original-center {
@@ -63,7 +66,7 @@ h6 {
   filter: saturate(110%) brightness(110%);
 }
 .picture-copy-center{
-  height: 30rem;
+  height: 28rem;
   position: absolute;
   left:50%;
   top: 50%;
@@ -75,7 +78,7 @@ h6 {
 }
 .name {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   width: fit-content;
   transform: translate(-50%, -50%);
@@ -90,8 +93,9 @@ h6 {
   overflow: hidden;
 }
 .name-artist span {
+  opacity: 1;
   display: block;
-  color: #eeb171;
+  color: #f3ac60;
   letter-spacing: 2px;
 }
 .social-media{
@@ -167,46 +171,104 @@ h6 {
   #eeb171 orange
   #717d76 dark gray
   */
-
-  /* ___________________________________________________________________________________ */
-.section-about {
-  padding: 5% 5%; 
-  height: 100vh;
-  top: 0vh;
-  width: 100%;
-  background-color: #63bbb4 ;
-  z-index: 3;
-  overflow: hidden;
-}
-.about-me-text {
-  margin-top: 5%;
-  margin-bottom: 5%;
-  line-height: 2;
-  text-align: center;
-  color: #ffffff;
-  font-size: 2rem;
-}
 /* ___________________________________________________________________________________ */
 .section-paintings {
   height: auto;
   width: 100vw;
-  padding-top: 15%;
-  padding-bottom: 10%;
+  padding-top: 10%;
+  padding-bottom: 0%;
+  margin-bottom: 0%;
   background-color: #e8eaf7;
-  overflow: scroll;
   display: flex;
   flex-flow: column;
-  z-index: 16;
+  position: relative;
+  z-index: 5;
+}
+
+.parallax-container {
+  height: 30vh;
+  width: 100%;
+}
+
+.parallax-img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  position: relative;
+  z-index: 4;
+  top: -50%;
+  /* filter: brightness(0.80); */
+  /* filter: blur(20px); */
+  /* filter: sepia(100%); */
+  /* filter: grayscale(100%); */
+}
+
+.upCase {
+  text-transform: uppercase;
+}
+
+.mw-cont{
+  position: relative;
+  z-index: 5;
+  top: 50%;
+  transform: translateY(-50%);
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+.mw2{
+  padding-left: 12px;
+}
+.my-works{
+  /* text-shadow: 3px 3px #f3ac60; */
+  font-size: 2rem;
+  font-weight: 900;
+  color: #e8eaf7;
+  letter-spacing: 2px;
+}
+.subtitle {
+  margin-left: 5%;
+  padding: 5% 0%;
+  font-size: 1.5rem;
+  /* font-weight: 900; */
+  color: #5f62ca;
+  letter-spacing: 2px;
+  opacity: 1;
+  /* position: relative;
+  z-index: 5;
+  top: 10.4rem;
+  margin-left: 5%; */
+
+  /* transform: translateY(-50%);
+  text-align: center;
+  top: 50%; */
+  /* text-shadow: 3px 3px #000000; */
+
+  /* font-size: 2.5rem;
+  font-weight: 900;
+  color: #e8eaf7;
+  letter-spacing: 2px; */
+}
+
+.curve {
+  position: absolute;
+  margin-top: -2%;
+  top: 100%;
+  height: fit-content;
+  width: 100%;
+  z-index: 5;
 }
 
 .images-div{
   height: auto;
   width: 100vw;
-  padding-top: 5%;
-  padding-bottom: 10%;
+  /* padding-top: 15%; */
+  /* padding-bottom: 10%; */
   column-count: 4;
   column-gap: 5px;
-  margin: 0% 1%;
+  /* margin: 0% 1%; */
 }
 
 .section-paintings h4{
@@ -224,6 +286,7 @@ h6 {
 .painting-container{
   position: relative;
   cursor: pointer;
+  z-index: 5;
 }
 .painting{
   display: block;
@@ -261,7 +324,7 @@ h6 {
 
 .full-img-container{
   background-color: #e8eaf7;
-  position: fixed;
+  /* position: fixed; */
   width: 100%;
   height: 100%;
   top:0;
@@ -282,7 +345,10 @@ h6 {
   pointer-events: all;
   margin: 0;
   height: 100%;
+  position: fixed;
+  z-index: 10;
 }
+
 .stop-scrolling{
   height: 100%; 
   overflow: hidden;
@@ -326,110 +392,97 @@ h6 {
 .changePicIcon:hover{
   cursor: pointer;
 }
-.upCase {
-  text-transform: uppercase;
-}
+
 /* ___________________________________________________________________________________ */
 .section-exhibitions{
-  height: 85vh;
+  height: auto;
   width: 100vw;
   background-color: #5f62ca;
   display: flex;
   flex-flow: row;
-  overflow: hidden;
+  
+  padding: 10% 0%;
+  position: relative;
+  z-index: 1;
 }
-
 .section-exhibitions-title{
   position: absolute;
-  z-index: 3;
+  z-index: 5;
   color: #fac185; 
   /*  #eeb171 */
   font-weight: 900;
   letter-spacing: 2px;
   font-size: 1.5rem;
   margin-left: 5%;
-  margin-top: 4%;
+  margin-top: 2%;
 }
-
 .exh{
   position: relative;
-  background-color: #63bbb4;
-  height: auto;
+  height: 100%;
   width: 50%;
-  top: 0%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
 }
 .exh-1{
-  background-color: #63bbb4;
+  position: relative;
+  margin-top: 2%;
+  z-index: 1;
 }
 .exh-2{
-  background-color: #5f62ca;
-}
-
-.exh-1-img-wrapper{
   position: relative;
-  z-index: 4;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin-top: 2%;
+  height: 100%;
+}
+.exh-1-img-wrapper{
   width: 65%;
   height: auto;
+  
 }
 .exh-img{
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  border-radius: 5%;
 }
 .exh-2-img-wrapper{
-  position: relative;
-  z-index: 4;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 65%;
-  height:auto;
 }
-
 .exh-text{
-  position: absolute;
-  z-index: 2;
-  background-color: #e8eaf7;
-  padding: 4%;
-  top: 50%;
+  width: 65%;
+  padding: 3% 0%;
+}
+.exh-text h3{
+  font-weight: 900;
 }
 .exh-text p{
   padding: 2% 0%;
 }
-.exh-1-text{
-  padding-bottom: 10%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.white {
+  color: white;
 }
-.exh-2-text{
-  padding-top: 10%;
-  right: 50%;
-  transform: translate(50%, -50%);
-}
-
 
 /* ___________________________________________________________________________________ */
 .section-contacts {
-  height: 20vh;
+  height: auto;
   width: 100%;
+  padding: 2%;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
   justify-content: center;
   background-color: #e8eaf7;
+  position: relative;
+
+  z-index: 5;
 }
 .section-contacts a{
   font-size: 1rem;
   color: #3b3b3b;
   text-decoration: none;
 }
-
 .media-bottom-section{
-  height: 2rem;
   width: 7rem;
   display: flex;
   flex-direction: row;
@@ -437,8 +490,8 @@ h6 {
   padding-top: 1.5%;
 }
 .media-icon-container{
-  height: 1.5rem;
-  width: 1.5rem;
+  height: 1.3rem;
+  width: 1.3rem;
   border: none;
   background-color: transparent;
 }
@@ -450,6 +503,14 @@ h6 {
   height: 100%;
   width: auto;
   border: 0;
+}
+.curve2{
+  position: absolute;
+  bottom: 75%;
+  height:fit-content;
+  width: 100%;
+  z-index: 2;
+  /* background-color: #eeb171; */
 }
 
 

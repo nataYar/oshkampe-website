@@ -11,7 +11,7 @@ const navSlide = () => {
             link.classList.toggle("navLinkShown")
         });
         burger.classList.toggle("toggle");
-        navBelowMenu.onmouseover = function() {mouseCursor.classList.add("cursor-circle-hidden");}
+        // navBelowMenu.onmouseover = function() {mouseCursor.classList.add("cursor-circle-hidden");}
     })}
 navSlide();
 
@@ -171,8 +171,7 @@ const musicImages = [
 ]
 
 
-
-//function for rendering pictures
+//function for rendering  all the pictures
 function createImageNode(array, place) {
     array.forEach((element) => {
         const containerDiv = document.createElement("div");
@@ -213,7 +212,10 @@ previews.forEach((element, index) => {
         burger.classList.toggle("hidden");
         fullImgCont.classList.add("open");
         let link = previews[index].getElementsByTagName('img')[0].src
-
+        // arrayOfCircledCursor.pop()
+        // console.log(arrayOfCircledCursor)
+        // mouseCursor.classList.add("cursor-circle-hidden")
+        // console.log(mouseCursor.classList)
         //customize fullImgCont div: img and text
         fullImgs.setAttribute("src", link);
         fullImgs.alt = `${previews[index].getElementsByTagName('img')[0].alt}`;
@@ -279,13 +281,10 @@ function changeImg(newIndex, array){
 }
 
 
-//resize horizontal and vertical pictures so they fit tablets
-// document.querySelector(".full-img-container").addEventListener("click", handleSizeChange);
-
+//resize horizontal and vertical pictures so they fit according to a screen size
 function handleSizeChange(){
     let width = currentImg.offsetWidth;
     let height = currentImg.offsetHeight;
-    console.log(window.innerWidth)
     let diff = width - height
     if(window.innerWidth < 559){
         console.log("less than 768 - width "+width, "height "+height)
@@ -293,13 +292,10 @@ function handleSizeChange(){
         currentImg.style.height = "auto"
     } else if (window.innerWidth < 1024
         && window.innerWidth > 560){
-        console.log("hi from middle  - width "+width, "height "+height)
         if(diff > 40 ){
-            console.log('horizontal ' +diff)
             currentImg.style.width = "100%"
             currentImg.style.height = "auto"
         } else if (diff < 40) {
-            console.log('vertical ' +diff);
             currentImg.style.width = "auto"
             currentImg.style.height = "80%"
         }
@@ -308,6 +304,3 @@ function handleSizeChange(){
         currentImg.style.height = "70%"   
     }
 }
-
-// window.onresize = function(){ location.reload(); }
-
