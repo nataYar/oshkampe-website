@@ -12,15 +12,15 @@
     nav {
       width: 8rem;
       overflow: hidden;
+      
     }
     .nav-vertical-links {
-      padding: 2%;
-      bottom: 0%;
-      padding-bottom: 80%;
       justify-content: flex-end;
+      height: 90%;
     }
+    
     .nav-vertical-links li {
-      padding-top: 20%;
+      padding: 2rem 0rem;
     }
     .nav-vertical-links a{
       font-size: 1.2rem;
@@ -38,31 +38,10 @@
     .picture-copy-center { display: none;}
     .scrollIconContainer { display: none;}
 
-    .name {
-      /* position: absolute; */
-      /* top: 45%; */
-    }
     .name-artist { 
       font-size: 3rem;
       width: 23rem;
     }
-    /*
-  #FFFFFF  white
-  #e0e2ed  gray
-  #5f62ca  purplish
-  #63bbb4  mint
-  #87e9ca  bright mint
-
-  //highlight: 
-  #62a774 green
-  #f8d39e font 
-
-  #deec90 yellow back
-  #d4a277 reddish font
-
-  #eeb171 orange
-  #717d76 dark gray
-  */
     .my-works{
       font-size: 2rem;
     }
@@ -99,7 +78,13 @@
       justify-content: space-between; 
       align-content: space-between;
       width: 100%;
+      padding-bottom: 10%;
     }
+    .exh-text{
+      width: 65%;
+      padding-top: 10% 
+    }
+
     .section-contacts{
       height: 20vh;
     }

@@ -1,8 +1,8 @@
-console.clear();
 //initial setting that can be changed when window resizes
 let controller = new ScrollMagic.Controller();
 
-document.querySelectorAll(".subtitle").forEach(function(el) { //here we animate all the subtitles on the page
+//here we animate all the subtitles on the page
+document.querySelectorAll(".subtitle").forEach(function(el) { 
   let tween = new TimelineMax()
   .fromTo(".subtitle", 2, { opacity: 0 }, { opacity: 1 })
   .fromTo(".subtitle", 5, { x: "-100%" },{x: "0%"}, "-=5")
@@ -15,7 +15,9 @@ document.querySelectorAll(".subtitle").forEach(function(el) { //here we animate 
   .addTo(controller);
 })
 
-document.querySelectorAll(".parallax-img").forEach(function(el) { //here we animate all the subtitles on the page
+
+document.querySelectorAll(".parallax-img").forEach(function(el) { 
+  
   let tween = new TimelineMax()
   .to(".parallax-img", 5, { y: -150 })
   let sceneParallax = new ScrollMagic.Scene ({
@@ -27,13 +29,24 @@ document.querySelectorAll(".parallax-img").forEach(function(el) { //here we anim
   .addTo(controller);
 })
 
+document.querySelectorAll(".painting").forEach(function(el) { 
+  console.log('hey')
+  let tween = new TimelineMax()
+  .to(".painting", 1, { width: '10%' })
+  .fromTo(".painting-overlay", 1, { x: "-100%" },{x: "0%"})
+  let scenePaintings = new ScrollMagic.Scene ({
+    // duration: "100%",
+    triggerElement: el,
+    triggerHook: "onEnter",
+  })
+  .setTween(tween)
+  .addTo(controller);
+})
+
 
 
   function sizeIt() {
-    if (window.innerWidth > 768) {
-      console.log("The screen is now large");
-      } else if (window.innerWidth < 768){
-        console.log("The screen is now small");
+    if (window.innerWidth < 768){
         const welcomePics = document.querySelectorAll('.welcome-pic')
         welcomePics.forEach(el => el.style.display = "none")
         document.querySelector(".scrollIcon").style.display = "none"

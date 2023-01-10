@@ -7,7 +7,7 @@ const sectionPaintings = document.querySelector(".section-paintings");
 const sectionContacts = document.getElementById("section-contacts") 
 const navCursor = document.querySelector("nav");
 const parallaxPics = document.querySelector(".parallax-container ")
-// const fullImgCont2 = document.querySelector(".full-img-container");
+// const fullImgCont2 = document.querySelector(".modal-container");
 
 
 const arrayOfCircledCursor = [sectionWelcome, sectionExhibitions, sectionContacts, sectionPaintings, parallaxPics];

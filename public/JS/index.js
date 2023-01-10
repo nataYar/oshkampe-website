@@ -30,7 +30,7 @@ const originalImages = [
     {direction:"vertical", lowQuality: "painting/original/preview/Flowers, 2009 FOR SALE 444$-min.JPG", fullImg: "painting/original/preview/E, 2015, acrylic FOR SALE 665$-min.jpg",  name: "Flowers, 2009 FOR SALE 444$", description: "E, 2015, acrylic FOR SALE 665$"},
     {direction:"vertical", lowQuality: "painting/original/preview/Fresh Calm  (for Tonya) september 2014, in private collection .JPG", fullImg: "painting/original/preview/E, 2015, acrylic FOR SALE 665$-min.jpg",  name: "Fresh Calm September 2014, in private collection", description: "E, 2015, acrylic FOR SALE 665$"},
 
-    {direction:"vertical", lowQuality: "painting/original/preview/Live to death, 2010, in private collection-min-min.JPG", fullImg: "painting/original/preview/E, 2015, acrylic FOR SALE 665$-min.jpg",  name: "Live to death, 2010, in private collection-min-min", description: "E, 2015, acrylic FOR SALE 665$"},
+    {direction:"vertical", lowQuality: "painting/original/preview/Live to death, 2010, in private collection-min-min.JPG", fullImg: "painting/original/preview/E, 2015, acrylic FOR SALE 665$-min.jpg",  name: "Live to death, 2010, in private collection", description: "E, 2015, acrylic FOR SALE 665$"},
     {direction:"vertical", lowQuality: "painting/original/preview/Mad Body's Wishes, 2012 FOR SALE 555$-min.JPG", fullImg: "painting/original/preview/E, 2015, acrylic FOR SALE 665$-min.jpg",  name: "Mad Body's Wishes, 2012 FOR SALE 555$", description: "E, 2015, acrylic FOR SALE 665$"},
     {direction:"vertical", lowQuality: "painting/original/preview/LTH, 2009, in private collection.jpg", fullImg: "painting/original/preview/E, 2015, acrylic FOR SALE 665$-min.jpg",  name: "LTH, 2009, in private collection", description: "E, 2015, acrylic FOR SALE 665$"},
 
@@ -202,7 +202,7 @@ createImageNode(copiesImages, placeForCopiesImages);
 createImageNode(musicImages, placeForMusicImages);
 
 //function for pics going Full-sized mode 
-const fullImgCont = document.querySelector(".full-img-container");
+const fullImgCont = document.querySelector(".modal-container");
 const previews = document.querySelectorAll(".painting-container");
 const fullImgs = document.querySelector(".full-img");
 const caption = document.querySelector(".caption")
@@ -210,19 +210,21 @@ const caption = document.querySelector(".caption")
 previews.forEach((element, index) => {
     element.addEventListener("click", () => {
         burger.classList.toggle("hidden");
+        // fullImgCont.classList.toggle("full-height");
         fullImgCont.classList.add("open");
+
         let link = previews[index].getElementsByTagName('img')[0].src
         // arrayOfCircledCursor.pop()
         // console.log(arrayOfCircledCursor)
         // mouseCursor.classList.add("cursor-circle-hidden")
         // console.log(mouseCursor.classList)
         //customize fullImgCont div: img and text
+
         fullImgs.setAttribute("src", link);
         fullImgs.alt = `${previews[index].getElementsByTagName('img')[0].alt}`;
         caption.innerHTML = `${previews[index].getElementsByTagName('img')[0].alt}`;
         //stop scrolling
         document.body.classList.add("stop-scrolling");
-        handleSizeChange() //sets the picture size according to a screen size
     }) 
 })
 
@@ -249,7 +251,6 @@ function getCurrImg(){
         currInd = musicImages.findIndex(el => el.name == currentImg.alt)
         array = musicImages
     }
-    console.log(currInd, array)
     return {currInd, array};
 }
 
@@ -257,14 +258,12 @@ function goDownGallery(n){
     let {currInd, array} = getCurrImg();
     let newIndex = currInd - n;
     changeImg(newIndex, array);
-    handleSizeChange() //resize a pic according to a window size
 }
 
 function goUpGallery(n){
     let {currInd, array} = getCurrImg();
     let newIndex = currInd + n;
     changeImg(newIndex, array);
-    handleSizeChange() //resize a pic according to a window size
 }
 
 function changeImg(newIndex, array){
@@ -278,29 +277,4 @@ function changeImg(newIndex, array){
     currentImg.setAttribute("alt", `${array[newIndex].name}`);
     currentImg.setAttribute("class", "full-img");
     caption.innerHTML = `${array[newIndex].name}`;
-}
-
-
-//resize horizontal and vertical pictures so they fit according to a screen size
-function handleSizeChange(){
-    let width = currentImg.offsetWidth;
-    let height = currentImg.offsetHeight;
-    let diff = width - height
-    if(window.innerWidth < 559){
-        console.log("less than 768 - width "+width, "height "+height)
-        currentImg.style.width = "100%"
-        currentImg.style.height = "auto"
-    } else if (window.innerWidth < 1024
-        && window.innerWidth > 560){
-        if(diff > 40 ){
-            currentImg.style.width = "100%"
-            currentImg.style.height = "auto"
-        } else if (diff < 40) {
-            currentImg.style.width = "auto"
-            currentImg.style.height = "80%"
-        }
-    } else {
-        currentImg.style.width = "auto"
-        currentImg.style.height = "70%"   
-    }
 }
